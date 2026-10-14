@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-navy: #0C1D44;
+  --color-dusty-rose: #C38EB4;
+  --color-pale-blush: #E1CBD7;
+  --color-soft-blue: #86AACF;
+  --color-deep-slate: #26425A;
+  --color-dark-blue-black: #0E1F2E;
+
+  --bg-app: #0E1F2E;
+  --bg-sidebar: #0B1926;
+  --bg-panel-primary: #112436;
+  --bg-panel-secondary: #152B3F;
+  --bg-panel-elevated: #1B354C;
+  --bg-panel-hover: #223F59;
+
+  --border-color: #26425A;
+  --border-subtle: rgba(134, 170, 207, 0.16);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #E1CBD7;
+  --text-muted: #86AACF;
+  --text-dim: #64819E;
+
+  --accent-primary: #C38EB4;
+  --accent-secondary: #86AACF;
+  --accent-highlight: #E1CBD7;
+}
+
+body {
+  background-color: #0E1F2E;
+  color: #E1CBD7;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1F2E;
+}
+::-webkit-scrollbar-thumb {
+  background: #26425A;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #395B78;
+}
+
+/* Layered panel gradient depth styles matching reference */
+.panel-depth-1 {
+  background: #112436;
+  border: 1px solid #26425A;
+}
+
+.panel-depth-2 {
+  background: #152B3F;
+  border: 1px solid #26425A;
+}
+
+.panel-depth-elevated {
+  background: #1B354C;
+  border: 1px solid #365570;
+}
+
+/* Delicate card hover effect using exact palette */
+.card-hover-fx {
+  transition: all 0.16s ease-in-out;
+}
+.card-hover-fx:hover {
+  border-color: #86AACF;
+  box-shadow: 0 4px 18px -4px rgba(134, 170, 207, 0.12);
+}
+
+/* Reference star divider */
+.star-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #86AACF;
+}
+.star-divider::before,
+.star-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #26425A;
+}
+.star-divider:not(:empty)::before {
+  margin-right: 1.5em;
+}
+.star-divider:not(:empty)::after {
+  margin-left: 1.5em;
+}
